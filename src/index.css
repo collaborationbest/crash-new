@@ -1,0 +1,64 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 10% 8%;
+    --foreground: 0 0% 100%;
+
+    --card: 240 10% 12%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 240 10% 12%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 174 100% 42%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 240 5% 16%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 240 5% 16%;
+    --muted-foreground: 240 5% 65%;
+
+    --accent: 174 100% 42%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 355 75% 64%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 240 5% 20%;
+    --input: 240 5% 20%;
+    --ring: 174 100% 42%;
+
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-casino-primary text-casino-text;
+  }
+
+  .glass-panel {
+    @apply bg-opacity-10 bg-white backdrop-blur-md border border-white border-opacity-10 rounded-2xl;
+  }
+  
+  .betting-input {
+    @apply bg-casino-secondary text-casino-text px-4 py-3 rounded-xl border-2 border-transparent focus:border-casino-accent focus:outline-none transition-all duration-200;
+  }
+  
+  .graph-container {
+    background: radial-gradient(circle at center, rgba(0, 215, 187, 0.05) 0%, rgba(18, 18, 18, 0) 70%);
+  }
+  
+  .graph-path {
+    filter: drop-shadow(0 0 8px rgba(0, 215, 187, 0.6));
+  }
+}
